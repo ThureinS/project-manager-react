@@ -10,9 +10,9 @@ const Input = ({ label, isTextArea, ...props }) => {
         {label}
       </label>
       {isTextArea ? (
-        <textarea className={inputStyles} {...props} />
+        <textarea ref={props.ref} className={inputStyles} {...props} />
       ) : (
-        <input className={inputStyles} {...props} />
+        <input ref={props.ref} className={inputStyles} {...props} />
       )}
     </p>
   );
